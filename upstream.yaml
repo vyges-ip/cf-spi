@@ -1,0 +1,14 @@
+schema_version: "vyges-upstream-v1"
+upstream:
+  type: "standalone"
+  repo: https://github.com/chipfoundry/CF_SPI
+  branch: main
+  commit: 04b08261a5e871f2872f75136b80c19181b55457
+  extracted_at: "2026-05-20T21:39:36Z"
+license:
+  spdx: Apache-2.0
+  file: LICENSE
+metadata_locked: false
+notes: |
+  ChipFoundry is the successor org to Efabless. CF_SPI (Original Copyright 2024 Efabless Corp.)
+  is now maintained by ChipFoundry. Apache 2.0 license preserved.

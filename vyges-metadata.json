@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vyges.com/schema/v1/vyges-metadata.schema.json",
+  "x-version": "1.0.0",
+  "name": "cf-spi",
+  "version": "0.1.0",
+  "description": "SPI master controller from ChipFoundry with TX/RX FIFOs. Configurable clock polarity/phase, programmable baud rate. APB / AHB-Lite / Wishbone wrappers; DFT-aware variants with sc_testmode for scan-chain test mode.",
+  "license": "Apache-2.0",
+  "maturity": "stable",
+  "target": ["asic", "fpga"],
+  "design_type": ["digital", "peripheral", "communication"],
+  "created": "2026-05-20T21:39:36Z",
+  "updated": "2026-05-20T21:39:36Z",
+  "source": {"type": "git", "url": "https://github.com/chipfoundry/CF_SPI", "commit": "04b08261a5e871f2872f75136b80c19181b55457", "private": false, "containsEncryptedPayload": false, "indexing": true},
+  "maintainers": [{"name": "Vyges", "url": "https://vyges.com", "github": "vyges"}],
+  "interfaces": [
+    {"type": "clock", "direction": "input", "protocol": "generic", "port": "clk_i", "width": 1},
+    {"type": "reset", "direction": "input", "protocol": "generic", "port": "rst_i", "width": 1},
+    {"type": "bus", "direction": "slave", "protocol": "wishbone-b4", "port": "wbs_*"},
+    {"type": "bus", "direction": "slave", "protocol": "apb", "port": "PADDR/PWDATA/..."},
+    {"type": "bus", "direction": "slave", "protocol": "ahb-lite", "port": "HADDR/HWDATA/..."},
+    {"type": "io", "direction": "input", "port": "miso", "width": 1},
+    {"type": "io", "direction": "output", "port": "mosi", "width": 1},
+    {"type": "io", "direction": "output", "port": "sclk", "width": 1},
+    {"type": "io", "direction": "output", "port": "csb", "width": 1},
+    {"type": "interrupt", "direction": "output", "port": "irq", "width": 1}
+  ],
+  "tags": ["spi", "spi-master", "peripheral", "chipfoundry", "sky130", "dft"]
+}
